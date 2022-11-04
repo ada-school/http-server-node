@@ -8,8 +8,8 @@ const requestListener = function (req, res) {
   res.setHeader("Content-Type", "text/html");
 
   if (url.pathname === "/user") {
-    const edad = url.searchParams.get("edad");
-    if (edad < 18) {
+    const age = url.searchParams.get("age");
+    if (age < 18) {
       fs.readFile(__dirname + "/toycar.html", "utf-8", (err, data) => {
         if (err) {
           res.writeHead(500);
